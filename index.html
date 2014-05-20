@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cartograms with d3 &amp; TopoJSON</title>
+    <title>Cartograms with d3 &amp; TopoJSON - The Gay Edition</title>
     <meta charset="utf-8">
     <meta property="og:image" content="placeholder.png">
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -129,6 +129,80 @@
       <a href="https://github.com/shawnbot/d3-cartogram/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     </div>
     <script>
+
+	var colorTable = {
+		'marriage':'#00ee00',
+		'civil_union':'#80f080',
+		'domestic_partnership':'#80c080',
+		'some_protections':'#709070',
+		'legal_but_on_hold':'#fba561',
+		'anti_CU_or_gay_amendment':'#d00000',
+	};
+	
+	var stateTable = {
+		'California':'marriage',
+		'Connecticut':'marriage',
+		'Delaware':'marriage',
+		'Hawaii':'marriage',
+		'Iowa':'marriage',
+		'Illinois':'marriage',
+		'Maine':'marriage',
+		'Maryland':'marriage',
+		'Massachusetts':'marriage',
+		'Minnesota':'marriage',
+		'New Hampshire':'marriage',
+		'New Jersey':'marriage',
+		'New Mexico':'marriage',
+		'New York':'marriage',
+		'Oregon':'marriage',
+		'Rhode Island':'marriage',
+		'Vermont':'marriage',
+		'Washington':'marriage',
+		'District of Columbia':'marriage',
+		'Colorado':'civil_union',
+		'Illinois':'civil_union',
+		'New Jersey':'civil_union',
+		'Wisconsin':'domestic_partnership',
+		'Arkansas':'legal_but_on_hold', 
+		'Idaho':'legal_but_on_hold', 
+		'Indiana':'legal_but_on_hold',
+		'Kentucky':'legal_but_on_hold',
+		'Ohio':'legal_but_on_hold',
+		'Oklahoma':'legal_but_on_hold',
+		'Michigan':'legal_but_on_hold', 
+		'Texas':'legal_but_on_hold', 
+		'Tennessee':'legal_but_on_hold',
+		'Pennsylvania':'legal_but_on_hold',
+		'Utah':'legal_but_on_hold',
+		'Virginia':'legal_but_on_hold',
+		'Alaska':'anti_CU_or_gay_amendment',
+		'Alabama':'anti_CU_or_gay_amendment', 
+		'Arkansas':'anti_CU_or_gay_amendment',
+		'Florida':'anti_CU_or_gay_amendment', 
+		'Georgia':'anti_CU_or_gay_amendment', 
+		'Idaho':'anti_CU_or_gay_amendment',
+		'Kansas':'anti_CU_or_gay_amendment',
+		'Kentucky':'anti_CU_or_gay_amendment', 
+		'Louisiana':'anti_CU_or_gay_amendment',
+		'Michigan':'anti_CU_or_gay_amendment',
+		'Mississippi':'anti_CU_or_gay_amendment',		
+		'Missouri':'anti_CU_or_gay_amendment',
+		'Montana':'anti_CU_or_gay_amendment',		
+		'Nebraska':'anti_CU_or_gay_amendment',
+		'Nevada':'anti_CU_or_gay_amendment',
+		'North Carolina':'anti_CU_or_gay_amendment',
+		'North Dakota':'anti_CU_or_gay_amendment',
+		'Ohio':'anti_CU_or_gay_amendment',
+		'Oklahoma':'anti_CU_or_gay_amendment',
+		'South Carolina':'anti_CU_or_gay_amendment',
+		'South Dakota':'anti_CU_or_gay_amendment',
+		'Texas':'anti_CU_or_gay_amendment',
+		'Utah':'anti_CU_or_gay_amendment',
+		'Virginia':'anti_CU_or_gay_amendment',
+		'West Virginia':'anti_CU_or_gay_amendment',
+		'Wisconsin':'anti_CU_or_gay_amendment',
+		'Wyoming':'anti_CU_or_gay_amendment'
+	};
 
       // hide the form if the browser doesn't do SVG,
       // (then just let everything else fail)
@@ -350,7 +424,7 @@
           .duration(750)
           .ease("linear")
           .attr("fill", function(d) {
-            return color(value(d));
+			return cTable[sTable[d.id]];
           })
           .attr("d", carto.path);
 
