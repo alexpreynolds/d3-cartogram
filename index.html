@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cartograms with d3 &amp; TopoJSON - The Gay Edition</title>
+    <title>Cartograms with d3 &amp; TopoJSON - The Same-Sex Marriage Edition</title>
     <meta charset="utf-8">
     <meta property="og:image" content="placeholder.png">
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -90,7 +90,7 @@
   </head>
   <body>
     <div id="container">
-      <h1>Cartograms with d3 &amp; TopoJSON</h1>
+      <h1>Cartograms with d3 &amp; TopoJSON - The Same-Sex Marriage Edition</h1>
       <form>
         <p>
           <label>Scale by <select id="field"></select></label>
@@ -424,7 +424,7 @@
           .duration(750)
           .ease("linear")
           .attr("fill", function(d) {
-			return cTable[sTable[d.id]];
+		       return colorTable[stateTable[d.id]];
           })
           .attr("d", carto.path);
 
