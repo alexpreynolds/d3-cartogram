@@ -1,45 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>D3-cartogram by alexpreynolds</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="D3-cartogram : Continuous area cartograms with d3 and TopoJSON - Same-sex marriage edition" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>D3-cartogram</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>D3-cartogram</h1>
-        <p>Continuous area cartograms with d3 and TopoJSON</p>
 
-        <p class="view"><a href="https://github.com/alexpreynolds/d3-cartogram">View the Project on GitHub <small>alexpreynolds/d3-cartogram</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/alexpreynolds/d3-cartogram">View on GitHub</a>
 
+          <h1 id="project_title">D3-cartogram</h1>
+          <h2 id="project_tagline">Continuous area cartograms with d3 and TopoJSON - Same-sex marriage edition</h2>
 
-        <ul>
-          <li><a href="https://github.com/alexpreynolds/d3-cartogram/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/alexpreynolds/d3-cartogram/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/alexpreynolds/d3-cartogram">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/alexpreynolds/d3-cartogram/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/alexpreynolds/d3-cartogram/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <p>This is a JavaScript implementation of <a href="http://chrisman.scg.ulaval.ca/G360/dougenik.pdf">an algoritm to construct continuous area cartograms</a>, by James A. Dougenik, Nicholas R. Chrisman and Duane R. Niemeyer, ©1985 by the Association of American Geographers. It relies heavily on <a href="http://github.com/mbostock/d3">d3</a> for rendering and <a href="http://github.com/mbostock/topojson">TopoJSON</a> both for writing and reading topological JSON geodata.</p>
 
 <p>The <a href="https://github.com/shawnbot/d3-cartogram/blob/master/index.html">included example</a> combines TopoJSON-encoded and boundaries of the United States from <a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Natural Earth</a> with <a href="http://www.census.gov/popest/data/state/totals/2011/">2011 US Census population estimates</a> to size each state proportionally.</p>
 
 <p>I include small modifications to how states and Washington DC are colored, which use a lookup table for the state of same-sex marriage laws in the United States as of May 19, 2014 (<a href="http://www.freedomtomarry.org/pages/where-state-laws-stand">http://www.freedomtomarry.org/pages/where-state-laws-stand</a>).</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/alexpreynolds">alexpreynolds</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">D3-cartogram maintained by <a href="https://github.com/alexpreynolds">alexpreynolds</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
